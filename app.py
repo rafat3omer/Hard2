@@ -63,7 +63,7 @@ st.markdown(
 # Display logo if you have a file called 'logo.png' in your app folder
 st.markdown(
     """
-    <img src="logo\hard.png" class="logo">
+    <img src="hard.png" class="logo">
     """,
     unsafe_allow_html=True
 )
