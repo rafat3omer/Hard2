@@ -25,7 +25,7 @@ st.markdown(
     """
     <style>
     .stApp {
-        background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+        background: linear-gradient(135deg, #808080, #1a1a1a);
         background-attachment: fixed;
         color: #FFD700; /* Default golden font */
     }
@@ -50,7 +50,7 @@ st.markdown(
 # Display logo if you have a file called 'logo.png' in your app folder
 st.markdown(
     """
-    <img src="hard.ico" class="logo">
+    <img src="hard.png" class="logo">
     """,
     unsafe_allow_html=True
 )
