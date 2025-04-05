@@ -2,7 +2,7 @@ import streamlit as st
 from streamlit_lottie import st_lottie
 import requests
 
-# Page config (corrected)
+# Page config (unchanged)
 st.set_page_config(
     page_title="NextGen Cloud HIS",
     page_icon="☁️",
@@ -17,42 +17,64 @@ def load_lottieurl(url: str):
         return None
     return r.json()
 
-# Example Lottie animation (cloud technology theme)
-lottie_cloud = load_lottieurl("https://assets10.lottiefiles.com/packages/lf20_qp1q7mct.json")
+# New better animation
+lottie_healthcare = load_lottieurl("https://assets4.lottiefiles.com/packages/lf20_mn0xjs9i.json")
 
-# Background styling (this is where background color is set)
+# Background + Styling
 st.markdown(
     """
     <style>
     .stApp {
-        background: linear-gradient(135deg, #c3ecff, #e0f7ff);
+        background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
         background-attachment: fixed;
+        color: #FFD700; /* Default golden font */
+    }
+    h1 {
+        color: #FFD700 !important;
+    }
+    h2, h3 {
+        color: #FFC300 !important;
+    }
+    .logo {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 120px;
+        z-index: 100;
     }
     </style>
     """,
     unsafe_allow_html=True
 )
 
-# Title and description
-st.title("☁️ NextGen Cloud HIS")
-st.subheader("Revolutionizing Healthcare Information Systems")
+# Display logo if you have a file called 'logo.png' in your app folder
+st.markdown(
+    """
+    <img src="hard.ico" class="logo">
+    """,
+    unsafe_allow_html=True
+)
+
+# Title and subtitle
+st.title("☁️ HARD , NextGen Cloud HIS")
+st.subheader("Revolutionizing Healthcare Information Systems for a Smarter Future")
 
 # Display animation
-if lottie_cloud:
-    st_lottie(lottie_cloud, height=300, key="cloud")
+if lottie_healthcare:
+    st_lottie(lottie_healthcare, height=300, key="healthcare")
 else:
     st.error("⚠️ Animation failed to load. Please check your internet connection.")
 
-# Main text
+# Main description text
 st.write("""
-Imagine managing healthcare like never before — secure, accessible, and cloud-native.  
-Our NextGen HIS empowers medical professionals to streamline operations, enhance patient care, and embrace true digital transformation.
+Imagine managing healthcare like never before — secure, cloud-native, and always accessible.  
+Our NextGen HIS empowers medical professionals to streamline operations, enhance patient care, and embrace the future of healthcare management.
 """)
 
-# Fancy button
-if st.button("🚀 Learn More Soon"):
+# Premium button
+if st.button("Coming Soon !"):
     st.balloons()
 
 # Footer
 st.markdown("---")
-st.caption("Built with ❤️ to honor a legacy and lead the future of healthcare technology.")
+st.caption("Built to honor a legacy and lead the future of healthcare technology.")
