@@ -1,6 +1,9 @@
 import streamlit as st
 from streamlit_lottie import st_lottie
 import requests
+import json
+
+
 
 # Page config (unchanged)
 st.set_page_config(
@@ -18,7 +21,17 @@ def load_lottieurl(url: str):
     return r.json()
 
 # New better animation
-lottie_healthcare = load_lottieurl("https://assets4.lottiefiles.com/packages/lf20_mn0xjs9i.json")
+#lottie_healthcare = load_lottieurl("https://assets4.lottiefiles.com/packages/lf20_mn0xjs9i.json")
+lottie_healthcare = load_lottieurl("https://assets10.lottiefiles.com/packages/lf20_qp1q7mct.json")
+
+
+
+#def load_lottiefile(filepath: str):
+ #   with open(filepath, "r") as f:
+  #      return json.load(f)
+# Load from local instead of URL
+#lottie_healthcare = load_lottiefile("lotties/healthcare.json")
+
 
 # Background + Styling
 st.markdown(
